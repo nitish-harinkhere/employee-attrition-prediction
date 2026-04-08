@@ -51,9 +51,9 @@ R, readr, dplyr, psych, ggplot2, caret, randomForest, pROC, gbm, rpart, rpart.pl
 
 ## Selected Visuals
 
-| Attrition by Monthly Income | Attrition by OverTime |
+| Attrition by Monthly Income | Attrition by Total Working Years |
 |---|---|
-| ![Attrition by Monthly Income](images/attrition_by_monthly_income.png) | ![Attrition by OverTime](images/attrition_by_overtime.png) |
+| ![Attrition by Monthly Income](images/attrition_by_monthly_income.png) | ![Attrition by Total Working Years](images/attrition_by_total_working_years.png) |
 
 | Logistic Regression ROC Curve | Model Comparison |
 |---|---|
