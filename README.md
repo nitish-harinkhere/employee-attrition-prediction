@@ -1,16 +1,16 @@
 # Employee Attrition Prediction
 
 ## Overview
-This project analyzes employee attrition using the IBM HR Analytics Employee Attrition dataset and compares multiple machine learning models built in R. The objective is to identify the main factors associated with employee turnover and support retention-focused business decisions through predictive analytics.
+This project analyzes employee attrition using the IBM HR Analytics Employee Attrition dataset and compares multiple machine learning models built in R. The goal is to identify key drivers of employee turnover and support retention-focused business decisions through predictive analytics.
 
 ## Business Problem
-Employee attrition creates hiring costs, training costs, productivity loss and operational disruption. The goal of this project is to understand which employee attributes are most associated with attrition and compare predictive models that can help HR teams identify higher-risk cases earlier.
+Employee attrition increases hiring costs, training costs, productivity loss and operational disruption. This project helps identify employee characteristics associated with attrition and compares predictive models that can support earlier HR intervention.
 
 ## Dataset
 - Source: IBM HR Analytics Employee Attrition dataset
 - Records: 1470 employees
 - Features: 35 columns in the original dataset
-- Data quality checks performed: dataset dimensions, missing values, duplicates, descriptive statistics and summary review
+- Data quality checks: dimensions, missing values, duplicates, descriptive statistics and summary review
 
 ## Tools and Libraries
 R, readr, dplyr, psych, ggplot2, caret, randomForest, pROC, gbm, rpart, rpart.plot, glmnet
@@ -21,23 +21,17 @@ R, readr, dplyr, psych, ggplot2, caret, randomForest, pROC, gbm, rpart, rpart.pl
 3. Removed non-predictive columns such as EmployeeNumber and Over18.
 4. Reviewed descriptive statistics and top correlations among numeric variables.
 5. Converted categorical variables to factors for modeling.
-6. Created exploratory visualizations for attrition trends across employee characteristics.
+6. Created exploratory visualizations for attrition trends.
 7. Split the dataset into training and test sets.
 8. Built and evaluated Random Forest, Gradient Boosting, CART and Logistic Regression models.
 9. Compared models using AUC, Accuracy, Kappa, MAE, RMSE and R-squared.
-10. Created model comparison plots for final evaluation.
 
-## Exploratory Analysis Highlights
-The exploratory analysis focused on attrition trends across:
-- Monthly Income
-- Age
-- Total Working Years
-- Job Role
-- OverTime
-- Distance From Home
-- Years at Company
-
-These visualizations were used to understand turnover patterns before model building.
+## Key Insights
+- Overtime was strongly associated with higher attrition.
+- Lower monthly income showed greater attrition risk.
+- Early-career and lower-tenure employees showed higher attrition.
+- Some job roles, especially sales-related roles, showed higher turnover patterns.
+- Distance from home also showed a relationship with attrition.
 
 ## Models Used
 - Random Forest
@@ -46,19 +40,24 @@ These visualizations were used to understand turnover patterns before model buil
 - Logistic Regression
 
 ## Evaluation Metrics
-The project compares model performance using:
 - AUC
 - Accuracy
 - Kappa
 - MAE
 - RMSE
 - R-squared
-
-It also includes:
 - Confusion matrices
 - ROC curves
-- Variable importance review for Random Forest
-- Model comparison charts
+
+## Selected Visuals
+
+| Attrition by Monthly Income | Attrition by OverTime |
+|---|---|
+| ![Attrition by Monthly Income](images/attrition_by_monthly_income.png) | ![Attrition by OverTime](images/attrition_by_overtime.png) |
+
+| Logistic Regression ROC Curve | Model Comparison |
+|---|---|
+| ![Logistic Regression ROC](images/logistic_regression_roc.png) | ![Model Comparison](images/model_comparison_auc_accuracy_kappa.png) |
 
 ## Repository Structure
 ```text
@@ -100,13 +99,7 @@ employee-attrition-prediction/
 4. Run the script from top to bottom.
 
 ## Output
-The project produces:
-- exploratory attrition visualizations
-- model summaries
-- variable importance output
-- confusion matrix plots
-- ROC curves
-- model comparison plots
+The project produces exploratory visualizations, model summaries, variable importance output, confusion matrix plots, ROC curves and model comparison plots.
 
 ## Author
 Nitish Harinkhere
